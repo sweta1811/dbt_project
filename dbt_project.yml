@@ -1,0 +1,37 @@
+name: 'sakila_db'
+version: '0.1'
+config-version: 2
+profile: 'sakila_db'
+source-paths: ["models"]
+analysis-paths: ["analysis"]
+test-paths: ["tests"]
+data-paths: ["data"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+  
+target-path: "target"
+clean-targets:
+    - "target"
+    - "dbt_modules"
+    - "logs"
+  
+models:
+  sakila_db:
+      materialized: table
+      staging:
+        database: DBT_DEMO_STAGING
+        schema: SAKILA
+        materialized: table
+      marts:
+        database: DBT_DEMO_MARTS
+        schema: CORE
+        materialized: view
+
+seeds:
+  sakila_db:
+    database: DBT_DEMO_SOURCES
+    schema: raw # all seeds in this project will use the mapping schema by default
+    sources:
+      schema: sakila # seeds in the `data/sakila/ subdirectory will use the sakila schema
+    lookups:
+      schema: lookups # seeds in the `data/lookups/ subdirectory will use the lookups schema
