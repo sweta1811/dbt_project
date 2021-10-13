@@ -2,7 +2,7 @@
 SELECT payment_date, amount, sum(amount) OVER (ORDER BY payment_date) as commutative_amount
 FROM (
   SELECT SPLIT_PART(payment_date,' ', 0) as payment_date, SUM(amount) AS amount
-  FROM "DBT_DEMO_SOURCES"."RAW"."PAYMENT"
+  FROM {{ ref('payment') }}
   GROUP BY SPLIT_PART(payment_date,' ', 0)
 ) p
 ORDER BY SPLIT_PART(payment_date,' ', 0)
