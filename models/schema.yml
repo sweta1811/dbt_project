@@ -17,7 +17,8 @@ models:
 
   - name: actor_films
     columns:
-      - name: payment_date
+      - name: first_name
+        name: last_name
         tests:
           - unique
           - not_null
