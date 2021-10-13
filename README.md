@@ -1,4 +1,24 @@
-Welcome to your new dbt project!
+##### Sakila Rental DVD Store
+
+This dbt project is a worked example to demonstrate usage of dbt cli to use different features of dbt. 
+
+
+NOTE: 
+The SQL in this project is compatible with Snowflake¹.
+
+
+#Dataset 
+
+Used the sakila dataset (https://dev.mysql.com/doc/sakila/en/) which is nicely normalised schema modelling a DVD rental store, featuring things like films, actors, film-actor relationships, and a central inventory table that connects films, stores, and rentals.
+
+
+
+
+
+### Installation
+
+
+
 
 ### Using the starter project
 
@@ -17,4 +37,4 @@ Try running the following commands:
 
 
 
-Dataset: Used the sakila dataset (created and open-sourced by MYSQL) which is nicely normalised schema modelling a DVD rental store, featuring things like films, actors, film-actor relationships, and a central inventory table that connects films, stores, and rentals.
+Dataset: Used the sakila dataset (https://dev.mysql.com/doc/sakila/en/) which is nicely normalised schema modelling a DVD rental store, featuring things like films, actors, film-actor relationships, and a central inventory table that connects films, stores, and rentals.
