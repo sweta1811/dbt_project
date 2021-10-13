@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: revenue
+    columns:
+      - name: payment_date
+        tests:
+          - unique
+          - not_null
+
+  - name: overdue_dvds
+    columns:
+      - name: customer
+        tests:
+          - unique
+          - not_null
+
+  - name: actor_films
+    columns:
+      - name: payment_date
+        tests:
+          - unique
+          - not_null
+
